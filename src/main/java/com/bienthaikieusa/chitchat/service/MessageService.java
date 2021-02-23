@@ -12,5 +12,4 @@ public interface MessageService {
     void remove(Message message);
     Optional<Message> findById(Long id);
     List<Message> findByUsername(String username);
-
 }
