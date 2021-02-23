@@ -30,7 +30,7 @@ public class StudyController {
         return new ResponseEntity<>(studies, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/message/{studentID}&{studyStatus}",method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/studying/{studentID}/{studyStatus}",method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Study>> getFailedStudying(@PathVariable("studentID") String studentID, @PathVariable("studyStatus") String studyStatus) {
         List<Study> studies = studyService.findByStatusAndStudentID(studentID, studyStatus);
         if(studies.isEmpty()){
