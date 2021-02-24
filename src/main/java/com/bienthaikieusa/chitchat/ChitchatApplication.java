@@ -12,5 +12,4 @@ public class ChitchatApplication {
 		SpringApplication.run(ChitchatApplication.class, args);
 	}
 
-
 }

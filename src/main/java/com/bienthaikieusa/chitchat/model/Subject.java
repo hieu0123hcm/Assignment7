@@ -11,7 +11,7 @@ public class Subject implements Serializable {
     @Id
     private String subjectid;
     @Column(name="tuitionfee")
-    private String tuitionFee;
+    private float tuitionFee;
 
     public Subject(){};
 
@@ -23,11 +23,11 @@ public class Subject implements Serializable {
         this.subjectid = subjectid;
     }
 
-    public String getTuitionFee() {
+    public float getTuitionFee() {
         return tuitionFee;
     }
 
-    public void setTuitionFee(String tuitionFee) {
+    public void setTuitionFee(float tuitionFee) {
         this.tuitionFee = tuitionFee;
     }
 }
