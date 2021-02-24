@@ -12,7 +12,10 @@ import java.util.List;
 @Repository
 public interface StudyRepository extends CrudRepository<Study, Long> {
 
-    @Query("SELECT s FROM Study s WHERE LOWER(s.studentID) = LOWER(:studentid) AND LOWER(s.studyStatus) = LOWER(:studystatus) ORDER BY s.id DESC")
-    public List<Study> find(@Param("studentid") String studentID, @Param("studystatus") String studyStatus);
+//    @Query("SELECT s FROM Study s WHERE LOWER(s.studentID) = LOWER(:studentid) AND LOWER(s.studyStatus) = LOWER(:studystatus) ORDER BY s.id DESC")
+//    public List<Study> find(@Param("studentid") String studentID, @Param("studystatus") String studyStatus);
 
+
+    @Query("SELECT s, t.tuitionFee FROM Study s JOIN Subject t ON s.subjectID = t.subjectid WHERE LOWER(s.studentID) = LOWER(:studentid) AND LOWER(s.studyStatus) = LOWER(:studystatus)" )
+    public List<Study> find(@Param("studentid") String studentID, @Param("studystatus") String studyStatus);
 }
