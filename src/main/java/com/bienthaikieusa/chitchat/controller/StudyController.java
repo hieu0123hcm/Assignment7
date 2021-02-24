@@ -32,11 +32,11 @@ public class StudyController {
     }
 
     @RequestMapping(value = "/studying/{studentID}/{studyStatus}",method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<StudyDTO> getFailedStudying(@PathVariable("studentID") String studentID, @PathVariable("studyStatus") String studyStatus) {
+    public ResponseEntity<List<StudyDTO>> getFailedStudying(@PathVariable("studentID") String studentID, @PathVariable("studyStatus") String studyStatus) {
         List<StudyDTO>  studies = studyService.findByStatusAndStudentID(studentID, studyStatus);
-//        if(studies.isEmpty()){
-//            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-//        }
-        return studies;
+        if(studies.isEmpty()){
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<>(studies, HttpStatus.OK);
     }
 }
