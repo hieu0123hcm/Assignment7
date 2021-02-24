@@ -22,16 +22,7 @@ public class Study implements Serializable {
     private String subject;
     @Column(name="semesterno")
     private int semesterNo;
-    @Column(table = "subject",name="tuitionfee")
-    private float tuitionFee;
 
-    public float getTuitionFee() {
-        return tuitionFee;
-    }
-
-    public void setTuitionFee(float tuitionFee) {
-        this.tuitionFee = tuitionFee;
-    }
 
     public Study(){};
 
