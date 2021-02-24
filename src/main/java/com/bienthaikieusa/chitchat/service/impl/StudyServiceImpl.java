@@ -31,7 +31,7 @@ public class StudyServiceImpl implements StudyService {
 
         List<StudyDTO> studyDTOList = new ArrayList<>();
         for (Study x: studyList) {
-            float tuitionFee = subjectRepository.find(x.getSubjectID());
+            float tuitionFee = subjectRepository.findSubjectTuitionFee(x.getSubjectID());
             StudyDTO studyDTO = new StudyDTO();
             studyDTO.setId(x.getId());
             studyDTO.setSemesterNo(x.getSemesterNo());
