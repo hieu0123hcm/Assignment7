@@ -35,7 +35,7 @@ public class StudyServiceImpl implements StudyService {
             studyDTO.setSubject(x.getSubject());
             studyDTO.setSubjectID(x.getSubjectID());
             studyDTO.setTuitionFee(1000000);
-
+            studyDTOList.add(studyDTO);
         }
 
         return studyDTOList;
