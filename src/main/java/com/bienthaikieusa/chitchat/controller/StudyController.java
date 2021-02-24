@@ -2,6 +2,7 @@ package com.bienthaikieusa.chitchat.controller;
 
 import com.bienthaikieusa.chitchat.model.Message;
 import com.bienthaikieusa.chitchat.model.Study;
+import com.bienthaikieusa.chitchat.model.StudyDTO;
 import com.bienthaikieusa.chitchat.service.StudyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -31,11 +32,11 @@ public class StudyController {
     }
 
     @RequestMapping(value = "/studying/{studentID}/{studyStatus}",method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<Study>> getFailedStudying(@PathVariable("studentID") String studentID, @PathVariable("studyStatus") String studyStatus) {
-        List<Study> studies = studyService.findByStatusAndStudentID(studentID, studyStatus);
-        if(studies.isEmpty()){
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-        }
-        return new ResponseEntity<>(studies, HttpStatus.OK);
+    public List<StudyDTO> getFailedStudying(@PathVariable("studentID") String studentID, @PathVariable("studyStatus") String studyStatus) {
+        List<StudyDTO>  studies = studyService.findByStatusAndStudentID(studentID, studyStatus);
+//        if(studies.isEmpty()){
+//            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+//        }
+        return studies;
     }
 }
