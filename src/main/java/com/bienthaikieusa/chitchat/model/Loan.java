@@ -11,7 +11,7 @@ public class Loan implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long loanId;
+    private Long Id;
     @Column(name = "loandate")
     private Date loanDate;
     @Column(name = "studentid")
