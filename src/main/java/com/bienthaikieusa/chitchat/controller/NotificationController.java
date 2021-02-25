@@ -32,4 +32,13 @@ public class NotificationController {
         return new ResponseEntity<>(notification,HttpStatus.OK);
     }
 
+
+    @RequestMapping(value = "/notifications", method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<List<Notification>> find(){
+        List<Notification> notifications = notificationService.findAll();
+        if (notifications.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<>(notifications, HttpStatus.OK);
+    }
 }

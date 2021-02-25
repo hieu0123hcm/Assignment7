@@ -22,6 +22,16 @@ public class Notification implements Serializable {
     private Date created_on;
     @Column(name = "isread")
     private boolean isRead;
+    @Column(name = "approval ")
+    private String approval;
+
+    public String getApproval() {
+        return approval;
+    }
+
+    public void setApproval(String approval) {
+        this.approval = approval;
+    }
 
     public boolean isRead() {
         return isRead;
