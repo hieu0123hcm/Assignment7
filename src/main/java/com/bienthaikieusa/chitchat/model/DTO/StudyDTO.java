@@ -1,4 +1,4 @@
-package com.bienthaikieusa.chitchat.model;
+package com.bienthaikieusa.chitchat.model.DTO;
 
 import javax.persistence.Column;
 

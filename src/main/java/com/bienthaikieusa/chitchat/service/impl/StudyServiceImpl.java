@@ -1,7 +1,7 @@
 package com.bienthaikieusa.chitchat.service.impl;
 
 import com.bienthaikieusa.chitchat.model.Study;
-import com.bienthaikieusa.chitchat.model.StudyDTO;
+import com.bienthaikieusa.chitchat.model.DTO.StudyDTO;
 import com.bienthaikieusa.chitchat.repository.StudyRepository;
 import com.bienthaikieusa.chitchat.repository.SubjectRepository;
 import com.bienthaikieusa.chitchat.service.StudyService;
