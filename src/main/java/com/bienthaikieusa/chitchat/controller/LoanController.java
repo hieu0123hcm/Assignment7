@@ -30,4 +30,13 @@ public class LoanController {
         }
         return new ResponseEntity<>(loanDTO, HttpStatus.OK);
     }
+
+    @RequestMapping(value = "/loans", method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<List<Loan>> findAllLoan() {
+        List<Loan> loans = loanService.getAll();
+        if (loans.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<>(loans, HttpStatus.OK);
+    }
 }

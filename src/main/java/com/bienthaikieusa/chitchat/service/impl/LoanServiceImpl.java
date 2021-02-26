@@ -44,4 +44,9 @@ public class LoanServiceImpl implements LoanService {
         }
         return loanDTOList;
     }
+
+    @Override
+    public List<Loan> getAll() {
+        return (List<Loan>) loanRepository.findAll();
+    }
 }

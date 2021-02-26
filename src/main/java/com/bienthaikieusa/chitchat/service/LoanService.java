@@ -9,4 +9,5 @@ import java.util.List;
 
 public interface LoanService {
     List<LoanDTO> getLoanByStudentID(String studentId);
+    List<Loan> getAll();
 }
