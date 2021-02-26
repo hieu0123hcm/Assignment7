@@ -25,8 +25,7 @@ public class LoanController {
     @RequestMapping(value = "/loan/{studentid}",method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<LoanDTO>> getLoanByStudentId(@PathVariable("studentid") String studentId) {
         List<LoanDTO> loanDTO = loanService.getLoanByStudentID(studentId);
-
-        if (!loanDTO.isEmpty()) {
+        if (loanDTO.isEmpty()) {
             return new ResponseEntity<>(loanDTO, HttpStatus.NO_CONTENT);
         }
         return new ResponseEntity<>(loanDTO, HttpStatus.OK);
