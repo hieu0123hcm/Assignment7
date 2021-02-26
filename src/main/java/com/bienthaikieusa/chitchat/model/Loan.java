@@ -23,9 +23,17 @@ public class Loan implements Serializable {
     @Column(name = "amount")
     private Long amount;
     @Column(name = "loanstatus")
-    private String loadStatus;
+    private String loanStatus;
     @Column(name = "amountreturned")
     private Long amountReturned;
+
+    public Long getAmountReturned() {
+        return amountReturned;
+    }
+
+    public void setAmountReturned(Long amountReturned) {
+        this.amountReturned = amountReturned;
+    }
 
     public Loan() {
     }
@@ -38,8 +46,8 @@ public class Loan implements Serializable {
         return loanId;
     }
 
-    public void setLoanId(Long loadId) {
-        this.loanId = loadId;
+    public void setLoanId(Long loanId) {
+        this.loanId = loanId;
     }
 
     public Date getLoanDate() {
@@ -82,11 +90,11 @@ public class Loan implements Serializable {
         this.amount = amount;
     }
 
-    public String getLoadStatus() {
-        return loadStatus;
+    public String getloanStatus() {
+        return loanStatus;
     }
 
-    public void setLoadStatus(String loadStatus) {
-        this.loadStatus = loadStatus;
+    public void setloanStatus(String loanStatus) {
+        this.loanStatus = loanStatus;
     }
 }

@@ -31,14 +31,14 @@ public class LoanServiceImpl implements LoanService {
 
             LoanDTO loanDTO = new LoanDTO();
             loanDTO.setAmount(x.getAmount());
-            loanDTO.setAmountReturned(x.getAmount());
+            loanDTO.setAmountReturned(x.getAmountReturned());
             loanDTO.setBundleId(x.getBundleId());
             loanDTO.setExpiredDate(x.getExpiredDate());
             loanDTO.setRate(rate);
             loanDTO.setLoanDate(x.getLoanDate());
             loanDTO.setloanId(x.getLoanId());
             loanDTO.setStudentId(x.getStudentId());
-            loanDTO.setloanStatus(x.getLoadStatus());
+            loanDTO.setloanStatus(x.getloanStatus());
 
             loanDTOList.add(loanDTO);
         }
