@@ -2,6 +2,7 @@ package com.bienthaikieusa.chitchat.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
 
 @Entity
 @Table(name = "TRANSACTION")
@@ -17,6 +18,28 @@ public class Transaction implements Serializable {
 
     @Column(name = "loanid")
     private Long loanId;
+
+    @Column(name = "date")
+    private Date date;
+
+    @Column(name = "studentid")
+    private String studentId;
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public String getStudentId() {
+        return studentId;
+    }
+
+    public void setStudentId(String studentId) {
+        this.studentId = studentId;
+    }
 
     public Transaction() {
     }
