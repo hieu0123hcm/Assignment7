@@ -13,6 +13,6 @@ import java.util.List;
 @Repository
 public interface LoanBundleRepository extends CrudRepository<LoanBundle, Long> {
 
-    @Query("SELECT lbd.rate From LoanBundle lbd WHERE lower(lbd.bundleId) = lower(:bundleid)")
+    @Query("SELECT lbd.rate From LoanBundle lbd WHERE lbd.bundleId = :bundleid")
     public int findLoanRate(@Param("bundleid") Long bundleId);
 }
