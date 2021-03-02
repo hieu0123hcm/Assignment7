@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class StudyServiceImpl implements StudyService {
@@ -44,5 +45,10 @@ public class StudyServiceImpl implements StudyService {
         }
 
         return studyDTOList;
+    }
+
+    @Override
+    public Optional<Study> findByStudyID(Long studyID){
+         return studyRepository.findById(studyID);
     }
 }
