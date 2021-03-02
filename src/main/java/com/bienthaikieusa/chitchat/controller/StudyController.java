@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class StudyController {
@@ -36,5 +37,14 @@ public class StudyController {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
         return new ResponseEntity<>(studies, HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/studying/{studyID}",method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Study> getStudyByID(@PathVariable("studyID") Long studyID) {
+        Optional<Study>  study = studyService.findByStudyID(studyID);
+        if(!study.isPresent()){
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<>(study.get(), HttpStatus.OK);
     }
 }
