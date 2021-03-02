@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -48,5 +49,12 @@ public class LoanServiceImpl implements LoanService {
     @Override
     public List<Loan> getAll() {
         return (List<Loan>) loanRepository.findAll();
+    }
+
+    @Override
+    public int insertLoan(int loan_id, String studentid, int bundleid, int amountreturned, String loanstatus,
+                          int amount, Date expireddate, Date loandate) {
+        // truyen param vao ham insertLoan
+        return  loanRepository.insertLoan(loan_id,studentid,bundleid,amountreturned,loanstatus,amount,expireddate,loandate);
     }
 }
