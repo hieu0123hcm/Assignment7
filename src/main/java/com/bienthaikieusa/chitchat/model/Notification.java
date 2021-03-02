@@ -24,19 +24,9 @@ public class Notification implements Serializable {
     private boolean isRead;
     @Column(name = "approval ")
     private String approval;
-    @Column(name = "senderid")
-    private String senderId;
 
     public String getApproval() {
         return approval;
-    }
-
-    public String getSenderId() {
-        return senderId;
-    }
-
-    public void setSenderId(String senderId) {
-        this.senderId = senderId;
     }
 
     public void setApproval(String approval) {
