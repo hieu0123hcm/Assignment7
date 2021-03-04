@@ -5,7 +5,7 @@ import java.io.Serializable;
 import java.sql.Date;
 
 @Entity
-@Table(name = "NOTIFICATION")
+@Table(name = "notification")
 public class Notification implements Serializable {
 
     private static final long serialVersionUID = 1L;
