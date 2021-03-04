@@ -13,4 +13,8 @@ import java.util.List;
 public interface LoanRepository extends CrudRepository<Loan, Long> {
     @Query("SELECT l FROM Loan l WHERE LOWER(l.studentId) = LOWER(:studentid) ORDER BY l.loanId DESC")
     public List<Loan> findByStudentID(@Param("studentid") String studentid);
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 }
