@@ -5,7 +5,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Entity
-@Table(name = "TRANSACTION")
+@Table(name = "transaction")
 public class Transaction implements Serializable {
     private static final long serialVersionUID = 1L;
 

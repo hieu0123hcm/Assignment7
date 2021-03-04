@@ -12,18 +12,25 @@ public class Loan implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long loanId;
+
     @Column(name = "loandate")
     private Date loanDate;
+
     @Column(name = "studentid")
     private String studentId;
+
     @Column(name = "expireddate")
     private Date expiredDate;
+
     @Column(name = "bundleid")
     private Long bundleId;
+
     @Column(name = "amount")
     private Long amount;
+
     @Column(name = "loanstatus")
     private String loanStatus;
+
     @Column(name = "amountreturned")
     private Long amountReturned;
 
@@ -36,6 +43,17 @@ public class Loan implements Serializable {
     }
 
     public Loan() {
+    }
+
+    public Loan(Long loanId, Date loanDate, String studentId, Date expiredDate, Long bundleId, Long amount, String loanStatus, Long amountReturned) {
+        this.loanId = loanId;
+        this.loanDate = loanDate;
+        this.studentId = studentId;
+        this.expiredDate = expiredDate;
+        this.bundleId = bundleId;
+        this.amount = amount;
+        this.loanStatus = loanStatus;
+        this.amountReturned = amountReturned;
     }
 
     public static long getSerialVersionUID() {
