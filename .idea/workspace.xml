@@ -22,7 +22,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9acc8e3d-21fb-4515-9541-a47228091500" name="Default Changelist" comment="" />
+    <list default="true" id="9acc8e3d-21fb-4515-9541-a47228091500" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bienthaikieusa/chitchat/controller/StudentController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bienthaikieusa/chitchat/model/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bienthaikieusa/chitchat/model/Subject.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bienthaikieusa/chitchat/model/Subject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bienthaikieusa/chitchat/repository/StudentRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bienthaikieusa/chitchat/service/StudentService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bienthaikieusa/chitchat/service/impl/StudentServiceImpl.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,13 +47,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="D:\IntelliJ IDEA 2020.2.3\plugins\maven\lib\maven3" />
-      </MavenGeneralSettings>
-    </option>
   </component>
   <component name="ProjectId" id="1opU6o7HFTNLn48hMYurZZtcoky" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -64,13 +66,15 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -99,6 +103,7 @@
       <workItem from="1614212247773" duration="10932000" />
       <workItem from="1614299292163" duration="2013000" />
       <workItem from="1614645099060" duration="3722000" />
+      <workItem from="1614962110716" duration="2497000" />
     </task>
     <servers />
   </component>
