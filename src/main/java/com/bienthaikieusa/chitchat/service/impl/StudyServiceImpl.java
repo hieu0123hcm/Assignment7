@@ -51,4 +51,9 @@ public class StudyServiceImpl implements StudyService {
     public Optional<Study> findByStudyID(Long studyID){
          return studyRepository.findById(studyID);
     }
+
+    @Override
+    public void save(Study study) {
+        studyRepository.save(study);
+    }
 }

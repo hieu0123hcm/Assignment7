@@ -1,16 +1,16 @@
 package com.bienthaikieusa.chitchat.controller;
 
+import com.bienthaikieusa.chitchat.model.Message;
 import com.bienthaikieusa.chitchat.model.Study;
 import com.bienthaikieusa.chitchat.model.DTO.StudyDTO;
 import com.bienthaikieusa.chitchat.service.StudyService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.util.UriComponentsBuilder;
 
 import java.util.List;
 import java.util.Optional;
@@ -46,5 +46,13 @@ public class StudyController {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
         return new ResponseEntity<>(study.get(), HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/studying/save",method = RequestMethod.POST)
+    public ResponseEntity<Study> createMessage(@RequestBody Study studying, UriComponentsBuilder builder) {
+        studyService.save(studying);
+        HttpHeaders headers = new HttpHeaders();
+        headers.setLocation(builder.path("/studying/{id}").buildAndExpand(studying.getId()).toUri());
+        return new ResponseEntity<>(studying, HttpStatus.CREATED);
     }
 }
