@@ -25,19 +25,21 @@ public class Payment implements Serializable {
     @Column(name = "amount")
     private Long amount;
 
-    @Column(name = "description")
-    private String description;
+    @Column(name = "approval")
+    private String approval;
 
     public Payment() {
     }
 
-    public String getDescription() {
-        return description;
+    public String getApproval() {
+        return approval;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setApproval(String approval) {
+        this.approval = approval;
     }
+
+
 
     public Date getCreated_on() {
         return created_on;
