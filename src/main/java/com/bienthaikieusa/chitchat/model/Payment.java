@@ -26,20 +26,18 @@ public class Payment implements Serializable {
     private Long amount;
 
     @Column(name = "approval")
-    private String approval;
+    private Boolean approval;
 
     public Payment() {
     }
 
-    public String getApproval() {
+    public Boolean getApproval() {
         return approval;
     }
 
-    public void setApproval(String approval) {
+    public void setApproval(Boolean approval) {
         this.approval = approval;
     }
-
-
 
     public Date getCreated_on() {
         return created_on;
