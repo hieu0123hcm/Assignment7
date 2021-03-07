@@ -25,9 +25,18 @@ public class Payment implements Serializable {
     @Column(name = "amount")
     private Long amount;
 
-
+    @Column(name = "description")
+    private String description;
 
     public Payment() {
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public Date getCreated_on() {
