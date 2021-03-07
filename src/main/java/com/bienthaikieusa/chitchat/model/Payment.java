@@ -19,8 +19,8 @@ public class Payment implements Serializable {
     @Column(name = "student_id")
     private String studentID;
 
-    @Column(name="created_on", insertable=false)
-    private Date created_on;
+    @Column(name="date", insertable=false)
+    private Date date;
 
     @Column(name = "amount")
     private Long amount;
@@ -28,11 +28,11 @@ public class Payment implements Serializable {
     public Payment() {
     }
 
-    public Payment(Long payment_id, int semester, String studentID, Date created_on, Long amount) {
+    public Payment(Long payment_id, int semester, String studentID, Date date, Long amount) {
         this.payment_id = payment_id;
         this.semester = semester;
         this.studentID = studentID;
-        this.created_on = created_on;
+        this.date = date;
         this.amount = amount;
     }
 
@@ -64,12 +64,12 @@ public class Payment implements Serializable {
         this.studentID = studentID;
     }
 
-    public Date getCreated_on() {
-        return created_on;
+    public Date getDate() {
+        return date;
     }
 
-    public void setCreated_on(Date created_on) {
-        this.created_on = created_on;
+    public void setDate(Date date) {
+        this.date = date;
     }
 
     public Long getAmount() {
