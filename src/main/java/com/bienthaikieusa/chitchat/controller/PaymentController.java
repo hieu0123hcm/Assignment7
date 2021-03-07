@@ -22,7 +22,7 @@ public class PaymentController {
     public ResponseEntity<Payment> createMessage(@RequestBody Payment payment, UriComponentsBuilder builder) {
         paymentService.save(payment);
         HttpHeaders headers = new HttpHeaders();
-        headers.setLocation(builder.path("/message/{id}").buildAndExpand(payment.getPayment_id()).toUri());
+        headers.setLocation(builder.path("/payment/{id}").buildAndExpand(payment.getPayment_id()).toUri());
         return new ResponseEntity<>(payment, HttpStatus.CREATED);
     }
 
