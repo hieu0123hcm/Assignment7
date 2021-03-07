@@ -19,7 +19,7 @@ public class PaymentController {
     private PaymentService paymentService;
 
     @RequestMapping(value = "/payment/create",method = RequestMethod.POST)
-    public ResponseEntity<Payment> createMessage(@RequestBody Payment payment, UriComponentsBuilder builder) {
+    public ResponseEntity<Payment> createPayment(@RequestBody Payment payment, UriComponentsBuilder builder) {
         paymentService.save(payment);
         HttpHeaders headers = new HttpHeaders();
         headers.setLocation(builder.path("/payment/{id}").buildAndExpand(payment.getPayment_id()).toUri());
