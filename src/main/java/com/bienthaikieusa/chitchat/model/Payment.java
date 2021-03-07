@@ -19,21 +19,29 @@ public class Payment implements Serializable {
     @Column(name = "student_id")
     private String studentID;
 
-    @Column(name="date", insertable=false)
-    private Date date;
+    @Column(name="create_on", insertable=false)
+    private Date create_on;
 
     @Column(name = "amount")
     private Long amount;
 
-    public Payment() {
-    }
-
-    public Payment(Long payment_id, int semester, String studentID, Date date, Long amount) {
+    public Payment(Long payment_id, int semester, String studentID, Date create_on, Long amount) {
         this.payment_id = payment_id;
         this.semester = semester;
         this.studentID = studentID;
-        this.date = date;
+        this.create_on = create_on;
         this.amount = amount;
+    }
+
+    public Payment() {
+    }
+
+    public Date getCreate_on() {
+        return create_on;
+    }
+
+    public void setCreate_on(Date create_on) {
+        this.create_on = create_on;
     }
 
     public static long getSerialVersionUID() {
@@ -64,13 +72,6 @@ public class Payment implements Serializable {
         this.studentID = studentID;
     }
 
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
 
     public Long getAmount() {
         return amount;
