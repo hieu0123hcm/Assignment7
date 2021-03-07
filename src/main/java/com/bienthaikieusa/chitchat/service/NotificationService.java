@@ -8,6 +8,7 @@ import java.util.Optional;
 public interface NotificationService {
     List<Notification> findAll();
     Optional<Notification> findNoticeById(Long noticeID);
-    List<Notification> findByReceiverID(String receiverID);
+    List<Notification> findBySendID(String sendID);
     void createNotification(Notification notification);
+    List<Notification> findByNotRead();
 }

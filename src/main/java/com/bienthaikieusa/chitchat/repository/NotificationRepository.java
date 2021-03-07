@@ -10,6 +10,9 @@ import java.util.List;
 
 @Repository
 public interface NotificationRepository extends CrudRepository<Notification, Long> {
-    @Query("SELECT s FROM Notification s WHERE LOWER(s.receiverId) = LOWER(:receiverid) ORDER BY s.created_on DESC")
-    public List<Notification> findByReceiverId(@Param("receiverid") String receiverId);
+    @Query("SELECT s FROM Notification s WHERE LOWER(s.sendid) = LOWER(:sendid) ORDER BY s.created_on DESC")
+    public List<Notification> findBySendID(@Param("sendid") String sendID);
+
+    @Query("SELECT s FROM Notification s where s.isRead = false ORDER BY s.created_on DESC")
+    public List<Notification> findByNotRead();
 }

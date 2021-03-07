@@ -5,7 +5,7 @@ import java.io.Serializable;
 import java.sql.Date;
 
 @Entity
-@Table(name = "NOTIFICATION")
+@Table(name = "notification")
 public class Notification implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -14,24 +14,14 @@ public class Notification implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "receiverid")
-    private String receiverId;
+    @Column(name = "sendid")
+    private String sendid;
     @Column(name = "message")
     private String message;
     @Column(name="created_on", insertable=false)
     private Date created_on;
     @Column(name = "isread")
     private boolean isRead;
-    @Column(name = "approval ")
-    private String approval;
-
-    public String getApproval() {
-        return approval;
-    }
-
-    public void setApproval(String approval) {
-        this.approval = approval;
-    }
 
     public boolean isRead() {
         return isRead;
@@ -56,12 +46,12 @@ public class Notification implements Serializable {
         this.id = id;
     }
 
-    public String getReceiverId() {
-        return receiverId;
+    public String getSendid() {
+        return sendid;
     }
 
-    public void setReceiverId(String receiverId) {
-        this.receiverId = receiverId;
+    public void setSendid(String sendeid) {
+        this.sendid = sendeid;
     }
 
     public String getMessage() {

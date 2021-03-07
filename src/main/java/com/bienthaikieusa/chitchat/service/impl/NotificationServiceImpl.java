@@ -26,8 +26,8 @@ public class NotificationServiceImpl implements NotificationService {
     }
 
     @Override
-    public List<Notification> findByReceiverID(String receiverID) {
-        return notificationRepository.findByReceiverId(receiverID);
+    public List<Notification> findBySendID(String sendID) {
+        return notificationRepository.findBySendID(sendID);
     }
 
     @Override
@@ -35,5 +35,9 @@ public class NotificationServiceImpl implements NotificationService {
         notificationRepository.save(notification);
     }
 
+    @Override
+    public List<Notification> findByNotRead() {
+       return notificationRepository.findByNotRead();
+    }
 
 }
