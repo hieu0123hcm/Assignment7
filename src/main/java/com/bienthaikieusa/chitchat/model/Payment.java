@@ -77,7 +77,6 @@ public class Payment implements Serializable {
         this.studentID = studentID;
     }
 
-
     public Long getAmount() {
         return amount;
     }
