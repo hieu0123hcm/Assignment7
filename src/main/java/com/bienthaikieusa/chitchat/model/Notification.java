@@ -20,15 +20,15 @@ public class Notification implements Serializable {
     private String message;
     @Column(name="created_on", insertable=false)
     private Date created_on;
-    @Column(name = "isread")
-    private boolean isRead;
+    @Column(name = "isadminread")
+    private boolean isAdminRead;
 
-    public boolean isRead() {
-        return isRead;
+    public boolean isAdminRead() {
+        return isAdminRead;
     }
 
-    public void setRead(boolean read) {
-        isRead = read;
+    public void setAdminRead(boolean adminRead) {
+        isAdminRead = adminRead;
     }
 
     public Notification() {
