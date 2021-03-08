@@ -10,6 +10,6 @@ import java.util.List;
 
 @Repository
 public interface TransactionRepository extends CrudRepository<Transaction, Long> {
-    @Query("SELECT t FROM Transaction t WHERE LOWER(t.loanId) = LOWER(:loanid) ORDER BY t.id DESC")
+    @Query("SELECT t FROM Transaction t WHERE t.loanId = :loanid ORDER BY t.id DESC")
     public List<Transaction> findByLoanId(@Param("loanid") Long loanId);
 }
