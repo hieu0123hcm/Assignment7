@@ -18,7 +18,7 @@ public class Notification implements Serializable {
     private String sendid;
     @Column(name = "message")
     private String message;
-    @Column(name="created_on", insertable=false)
+    @Column(name="created_on")
     private Date created_on;
     @Column(name = "isadminread")
     private boolean isAdminRead;

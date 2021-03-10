@@ -64,17 +64,6 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ChitchatApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="Assignment7" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.bienthaikieusa.chitchat.ChitchatApplication" />
@@ -105,7 +94,7 @@
       <workItem from="1615118268963" duration="468000" />
       <workItem from="1615119620656" duration="152000" />
       <workItem from="1615120580339" duration="1065000" />
-      <workItem from="1615197307889" duration="508000" />
+      <workItem from="1615197307889" duration="1018000" />
     </task>
     <servers />
   </component>
