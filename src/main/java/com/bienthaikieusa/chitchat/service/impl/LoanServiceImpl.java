@@ -49,4 +49,33 @@ public class LoanServiceImpl implements LoanService {
     public List<Loan> getAll() {
         return (List<Loan>) loanRepository.findAll();
     }
+
+    @Override
+    public Loan saveLoan(Loan loan) {
+        return loanRepository.save(loan);
+    }
+
+    @Override
+    public Loan updateLoan(Loan loan) {
+        Loan existingLoan = loanRepository.findById(loan.getLoanId()).orElse(null);
+        existingLoan.setLoanId(loan.getLoanId());
+        existingLoan.setAmount(loan.getAmount());
+        existingLoan.setAmountReturned(loan.getAmountReturned());
+        existingLoan.setExpiredDate(loan.getExpiredDate());
+        existingLoan.setBundleId(loan.getBundleId());
+        existingLoan.setStudentId(loan.getStudentId());
+        existingLoan.setLoanDate(loan.getLoanDate());
+        existingLoan.setLoanStatus(loan.getLoanStatus());
+        return loanRepository.save(existingLoan);
+    }
+
+    @Override
+    public void remove(Loan loan) {
+        loanRepository.delete(loan);
+    }
+
+    @Override
+    public Optional<Loan> findById(Long id) {
+        return loanRepository.findById(id);
+    }
 }

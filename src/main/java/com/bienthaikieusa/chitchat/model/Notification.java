@@ -33,7 +33,6 @@ public class Notification implements Serializable {
 
     public Notification() {
     }
-
     public static long getSerialVersionUID() {
         return serialVersionUID;
     }
