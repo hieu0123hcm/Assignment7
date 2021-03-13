@@ -54,7 +54,7 @@ public class Subject implements Serializable {
         this.tuitionFee = tuitionFee;
     }
 
-    
+
 
     @Override
     public boolean equals(Object o) {
