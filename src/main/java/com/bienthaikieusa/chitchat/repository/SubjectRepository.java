@@ -13,4 +13,6 @@ import java.util.List;
 public interface SubjectRepository extends CrudRepository<Subject, String> {
     @Query("SELECT s.tuitionFee  FROM Subject s WHERE LOWER(s.subjectid) = LOWER(:subjectid)" )
     public float findSubjectTuitionFee(@Param("subjectid") String subjectID);
+
+
 }
