@@ -14,7 +14,7 @@ public interface LoanService {
 
 //    Loan updateLoan(Loan loan);//Phuc
 //
-//    Loan saveLoan(Loan loan);//Phuc
+    Loan saveLoan(Loan loan);//Phuc
 //
 //    void remove(Loan loan);//Phuc
 //

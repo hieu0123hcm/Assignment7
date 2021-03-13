@@ -50,10 +50,10 @@ public class LoanServiceImpl implements LoanService {
         return (List<Loan>) loanRepository.findAll();
     }
 
-//    @Override
-//    public Loan saveLoan(Loan loan) {
-//        return loanRepository.save(loan);
-//    }
+    @Override
+    public Loan saveLoan(Loan loan) {
+        return loanRepository.save(loan);
+    }
 //
 //    @Override
 //    public Loan updateLoan(Loan loan) {

@@ -37,11 +37,11 @@ public class LoanController {
         return new ResponseEntity<>(loans, HttpStatus.OK);
     }
 
-//    @RequestMapping(value = "/loan/add", method = RequestMethod.POST)
-//    public ResponseEntity<Loan> addLoan(@RequestBody Loan loan) {
-//        Loan loanAdd = loanService.saveLoan(loan);
-//        return new ResponseEntity<>(loanAdd,HttpStatus.CREATED);
-//    }
+    @RequestMapping(value = "/loan/add", method = RequestMethod.POST)
+    public ResponseEntity<Loan> addLoan(@RequestBody Loan loan) {
+        Loan loanAdd = loanService.saveLoan(loan);
+        return new ResponseEntity<>(loanAdd,HttpStatus.CREATED);
+    }
 //
 //    @RequestMapping( value = "/loan/update", method =  RequestMethod.PUT,produces = MediaType.APPLICATION_JSON_VALUE)
 //    public ResponseEntity<Loan> updateLoan(@RequestBody Loan loan) {
