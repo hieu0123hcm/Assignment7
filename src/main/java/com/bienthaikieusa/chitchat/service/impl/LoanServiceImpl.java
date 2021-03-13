@@ -38,7 +38,7 @@ public class LoanServiceImpl implements LoanService {
             loanDTO.setLoanDate(x.getLoanDate());
             loanDTO.setloanId(x.getLoanId());
             loanDTO.setStudentId(x.getStudentId());
-            loanDTO.setloanStatus(x.getloanStatus());
+            loanDTO.setloanStatus(x.getLoanStatus());
 
             loanDTOList.add(loanDTO);
         }
