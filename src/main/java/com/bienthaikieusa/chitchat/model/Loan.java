@@ -28,13 +28,13 @@ public class Loan implements Serializable {
     @Column(name = "amountreturned")
     private Long amountReturned;
 
-    public String getLoanStatus() {
-        return loanStatus;
-    }
-
-    public void setLoanStatus(String loanStatus) {
-        this.loanStatus = loanStatus;
-    }
+//    public String getLoanStatus() {
+//        return loanStatus;
+//    }
+//
+//    public void setLoanStatus(String loanStatus) {
+//        this.loanStatus = loanStatus;
+//    }
 
     public Long getAmountReturned() {
         return amountReturned;

@@ -21,17 +21,17 @@ public class LoanDTO {
     public LoanDTO() {
     }
 
-    public LoanDTO(Long loanId, Date loanDate, String studentId, Date expiredDate, Long bundleId, Long amount, String loanStatus, Long amountReturned, int rate) {
-        this.loanId = loanId;
-        this.loanDate = loanDate;
-        this.studentId = studentId;
-        this.expiredDate = expiredDate;
-        this.bundleId = bundleId;
-        this.amount = amount;
-        this.loanStatus = loanStatus;
-        this.amountReturned = amountReturned;
-        this.rate = rate;
-    }
+//    public LoanDTO(Long loanId, Date loanDate, String studentId, Date expiredDate, Long bundleId, Long amount, String loanStatus, Long amountReturned, int rate) {
+//        this.loanId = loanId;
+//        this.loanDate = loanDate;
+//        this.studentId = studentId;
+//        this.expiredDate = expiredDate;
+//        this.bundleId = bundleId;
+//        this.amount = amount;
+//        this.loanStatus = loanStatus;
+//        this.amountReturned = amountReturned;
+//        this.rate = rate;
+//    }
 
     public Long getloanId() {
         return loanId;
