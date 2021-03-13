@@ -107,23 +107,23 @@ public class Loan implements Serializable {
         this.loanStatus = loanStatus;
     }
 
-//    @Override
-//    public boolean equals(Object o) {
-//        if (this == o) return true;
-//        if (o == null || getClass() != o.getClass()) return false;
-//        Loan loan = (Loan) o;
-//        return Objects.equals(loanId, loan.loanId) &&
-//                Objects.equals(loanDate, loan.loanDate) &&
-//                Objects.equals(studentId, loan.studentId) &&
-//                Objects.equals(expiredDate, loan.expiredDate) &&
-//                Objects.equals(bundleId, loan.bundleId) &&
-//                Objects.equals(amount, loan.amount) &&
-//                Objects.equals(loanStatus, loan.loanStatus) &&
-//                Objects.equals(amountReturned, loan.amountReturned);
-//    }
-//
-//    @Override
-//    public int hashCode() {
-//        return Objects.hash(loanId, loanDate, studentId, expiredDate, bundleId, amount, loanStatus, amountReturned);
-//    }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Loan loan = (Loan) o;
+        return Objects.equals(loanId, loan.loanId) &&
+                Objects.equals(loanDate, loan.loanDate) &&
+                Objects.equals(studentId, loan.studentId) &&
+                Objects.equals(expiredDate, loan.expiredDate) &&
+                Objects.equals(bundleId, loan.bundleId) &&
+                Objects.equals(amount, loan.amount) &&
+                Objects.equals(loanStatus, loan.loanStatus) &&
+                Objects.equals(amountReturned, loan.amountReturned);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(loanId, loanDate, studentId, expiredDate, bundleId, amount, loanStatus, amountReturned);
+    }
 }
