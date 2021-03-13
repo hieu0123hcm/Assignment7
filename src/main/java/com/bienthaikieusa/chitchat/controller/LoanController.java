@@ -42,23 +42,23 @@ public class LoanController {
         Loan loanAdd = loanService.saveLoan(loan);
         return new ResponseEntity<>(loanAdd,HttpStatus.CREATED);
     }
-//
-//    @RequestMapping( value = "/loan/update", method =  RequestMethod.PUT,produces = MediaType.APPLICATION_JSON_VALUE)
-//    public ResponseEntity<Loan> updateLoan(@RequestBody Loan loan) {
-//        Loan loanupdate = loanService.updateLoan(loan);
-//        if(loanupdate != null ) {
-//            return new ResponseEntity<>( HttpStatus.NO_CONTENT);
-//        }
-//        return new ResponseEntity<>(loan, HttpStatus.OK);
-//    }
-//
-//    @RequestMapping( value = "/loan/delete/{id}", method =  RequestMethod.DELETE,produces = MediaType.APPLICATION_JSON_VALUE)
-//    public ResponseEntity<Loan> deleteLoan(@PathVariable("id") Long id) {
-//        Optional<Loan> findByloan = loanService.findById(id);
-//        if (!findByloan.isPresent()) {
-//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-//        }
-//        loanService.remove(findByloan.get());
-//        return new ResponseEntity<>( HttpStatus.NO_CONTENT);
-//    }
+
+    @RequestMapping( value = "/loan/update", method =  RequestMethod.PUT,produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Loan> updateLoan(@RequestBody Loan loan) {
+        Loan loanupdate = loanService.updateLoan(loan);
+        if(loanupdate != null ) {
+            return new ResponseEntity<>( HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<>(loan, HttpStatus.OK);
+    }
+
+    @RequestMapping( value = "/loan/delete/{id}", method =  RequestMethod.DELETE,produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Loan> deleteLoan(@PathVariable("id") Long id) {
+        Optional<Loan> findByloan = loanService.findById(id);
+        if (!findByloan.isPresent()) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        loanService.remove(findByloan.get());
+        return new ResponseEntity<>( HttpStatus.NO_CONTENT);
+    }
 }
