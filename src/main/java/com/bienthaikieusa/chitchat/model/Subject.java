@@ -12,18 +12,13 @@ public class Subject implements Serializable {
     @Id
     private String subjectid;
     @Column(name="tuitionfee")
-    private Long tuitionFee;
+    private float tuitionFee;
     @Column(name = "subject")
     private String subject;
     @Column(name = "description")
     private String description;
 
-    public Subject(String subjectid, Long tuitionFee, String subject, String description) {
-        this.subjectid = subjectid;
-        this.tuitionFee = tuitionFee;
-        this.subject = subject;
-        this.description = description;
-    }
+
 
     public String getSubject() {
         return subject;
@@ -51,13 +46,16 @@ public class Subject implements Serializable {
         this.subjectid = subjectid;
     }
 
-    public Long getTuitionFee() {
+    public float getTuitionFee() {
         return tuitionFee;
     }
 
-    public void setTuitionFee(Long tuitionFee) {
+    public void setTuitionFee(float tuitionFee) {
         this.tuitionFee = tuitionFee;
     }
+
+    
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
