@@ -32,7 +32,7 @@ public class PaymentController {
         Optional<Payment> payment = paymentService.findById(id);
 
         if (!payment.isPresent()) {
-            return new ResponseEntity<>(payment.get(), HttpStatus.NO_CONTENT);
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
         return new ResponseEntity<>(payment.get(), HttpStatus.OK);
     }
@@ -41,7 +41,7 @@ public class PaymentController {
     public ResponseEntity<List<Payment>> getPaymentByStuID(@PathVariable("id") String id) {
         List<Payment> payments = paymentService.findByStudentID(id);
 
-        if (!payments.isEmpty()) {
+        if (payments.isEmpty()) {
             return new ResponseEntity<>(payments, HttpStatus.NO_CONTENT);
         }
         return new ResponseEntity<>(payments, HttpStatus.OK);
