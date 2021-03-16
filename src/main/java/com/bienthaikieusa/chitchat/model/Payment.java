@@ -19,7 +19,7 @@ public class Payment implements Serializable {
     @Column(name = "student_id")
     private String studentID;
 
-    @Column(name="created_on", insertable=false)
+    @Column(name="created_on")
     private Date created_on;
 
     @Column(name = "amount")
