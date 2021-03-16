@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -34,5 +35,15 @@ public class PaymentController {
             return new ResponseEntity<>(payment.get(), HttpStatus.NO_CONTENT);
         }
         return new ResponseEntity<>(payment.get(), HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/payment/approve/{id}",method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<List<Payment>> getPaymentByStuID(@PathVariable("id") String id) {
+        List<Payment> payments = paymentService.findByStudentID(id);
+
+        if (!payments.isEmpty()) {
+            return new ResponseEntity<>(payments, HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<>(payments, HttpStatus.OK);
     }
 }

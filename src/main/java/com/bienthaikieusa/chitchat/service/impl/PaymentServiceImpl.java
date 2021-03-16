@@ -7,6 +7,7 @@ import com.bienthaikieusa.chitchat.service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -22,6 +23,11 @@ public class PaymentServiceImpl implements PaymentService {
     @Override
     public Optional<Payment> findById(Long id) {
         return paymentRepository.findById(id);
+    }
+
+    @Override
+    public List<Payment> findByStudentID(String studentID) {
+        return paymentRepository.findByStudentID(studentID);
     }
 
 
