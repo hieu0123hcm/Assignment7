@@ -12,5 +12,5 @@ import java.util.List;
 @Repository
 public interface PaymentRepository extends CrudRepository<Payment, Long> {
     @Query("SELECT l FROM Payment l WHERE lower(l.studentID)  = lower(:studentID)  and l.approval = true")
-    public List<Payment> findByStudentID(@Param("studentID") String studentId);
+    public List<Payment> findByStudentID(@Param("studentID") String studentID);
 }
