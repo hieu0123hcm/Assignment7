@@ -28,6 +28,15 @@ public class LoanController {
         return new ResponseEntity<>(loanDTO, HttpStatus.OK);
     }
 
+    @RequestMapping(value = "/loans/{loanid}",method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Loan> getLoanByStudentId(@PathVariable("loanid") Long LoanId) {
+        Optional<Loan> loan = loanService.findById(LoanId);
+        if (!loan.isPresent()) {
+            return new ResponseEntity<>( HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<>(loan.get(), HttpStatus.OK);
+    }
+
     @RequestMapping(value = "/loans", method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Loan>> findAllLoan() {
         List<Loan> loans = loanService.getAll();
