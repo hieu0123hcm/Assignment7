@@ -78,4 +78,9 @@ public class LoanServiceImpl implements LoanService {
     public Optional<Loan> findById(Long id) {
         return loanRepository.findById(id);
     }
+
+    @Override
+    public List<Loan> getAllUnactiveLoan() {
+        return loanRepository.findUnactiveLoan();
+    }
 }

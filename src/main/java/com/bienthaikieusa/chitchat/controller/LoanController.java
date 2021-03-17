@@ -37,6 +37,15 @@ public class LoanController {
         return new ResponseEntity<>(loans, HttpStatus.OK);
     }
 
+    @RequestMapping(value = "/loans/unactive", method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<List<Loan>> findAllUnactiveLoan() {
+        List<Loan> loans = loanService.getAllUnactiveLoan();
+        if (loans.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<>(loans, HttpStatus.OK);
+    }
+
     @RequestMapping(value = "/loan/add", method = RequestMethod.POST)
     public ResponseEntity<Loan> addLoan(@RequestBody Loan loan) {
         Loan loanAdd = loanService.saveLoan(loan);

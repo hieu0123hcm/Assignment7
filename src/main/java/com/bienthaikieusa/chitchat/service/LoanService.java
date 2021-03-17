@@ -19,4 +19,7 @@ public interface LoanService {
     void remove(Loan loan);//Phuc
 
     Optional<Loan> findById(Long loanId);//Phuc
+
+    List<Loan> getAllUnactiveLoan();
+
 }
