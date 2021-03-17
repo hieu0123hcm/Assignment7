@@ -13,7 +13,7 @@ public class LoanBundle implements Serializable {
     private Long bundleId;
 
     @Column(name = "rate")
-    private int rate;
+    private float rate;
 
     @Column(name = "amount")
     private Long amount;
