@@ -15,6 +15,28 @@ public class LoanBundle implements Serializable {
     @Column(name = "rate")
     private int rate;
 
+    @Column(name = "amount")
+    private Long amount;
+
+    @Column(name = "month")
+    private int month;
+
+    public Long getAmount() {
+        return amount;
+    }
+
+    public void setAmount(Long amount) {
+        this.amount = amount;
+    }
+
+    public int getMonth() {
+        return month;
+    }
+
+    public void setMonth(int month) {
+        this.month = month;
+    }
+
     public LoanBundle() {
     }
 
