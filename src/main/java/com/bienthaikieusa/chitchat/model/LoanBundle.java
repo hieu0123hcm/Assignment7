@@ -52,11 +52,11 @@ public class LoanBundle implements Serializable {
         this.bundleId = bundleId;
     }
 
-    public int getRate() {
+    public float getRate() {
         return rate;
     }
 
-    public void setRate(int rate) {
+    public void setRate(float rate) {
         this.rate = rate;
     }
 }
