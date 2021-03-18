@@ -41,7 +41,7 @@ public class LoanDTO {
         this.loanId = loanId;
     }
 
-    public Date getDate() {
+    public Date getLoanDate() {
         return loanDate;
     }
 
