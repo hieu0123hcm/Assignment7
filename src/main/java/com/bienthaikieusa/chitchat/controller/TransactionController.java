@@ -1,16 +1,16 @@
 package com.bienthaikieusa.chitchat.controller;
 
 import com.bienthaikieusa.chitchat.model.DTO.LoanDTO;
+import com.bienthaikieusa.chitchat.model.Payment;
 import com.bienthaikieusa.chitchat.model.Transaction;
 import com.bienthaikieusa.chitchat.service.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.util.UriComponentsBuilder;
 
 import java.util.List;
 
@@ -26,5 +26,13 @@ public class TransactionController {
             return new ResponseEntity<>(transactionList, HttpStatus.NO_CONTENT);
         }
         return new ResponseEntity<>(transactionList, HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/trans/create",method = RequestMethod.POST)
+    public ResponseEntity<Transaction> createTransaction(@RequestBody Transaction transaction, UriComponentsBuilder builder) {
+        transactionService.save(transaction);
+        HttpHeaders headers = new HttpHeaders();
+        headers.setLocation(builder.path("/trans/{loanid}").buildAndExpand(transaction.getLoanId()).toUri());
+        return new ResponseEntity<>(transaction, HttpStatus.CREATED);
     }
 }

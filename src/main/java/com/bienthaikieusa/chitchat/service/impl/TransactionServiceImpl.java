@@ -17,4 +17,9 @@ public class TransactionServiceImpl implements TransactionService {
     public List<Transaction> getTransactionByTransID(Long transID) {
         return transactionRepository.findByLoanId(transID);
     }
+
+    @Override
+    public void save(Transaction transaction) {
+        transactionRepository.save(transaction);
+    }
 }

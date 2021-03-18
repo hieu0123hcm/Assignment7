@@ -76,6 +76,17 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ChitchatApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="Assignment7" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.bienthaikieusa.chitchat.ChitchatApplication" />
@@ -116,6 +127,8 @@
       <workItem from="1615977893100" duration="455000" />
       <workItem from="1615980338739" duration="322000" />
       <workItem from="1616030522096" duration="96000" />
+      <workItem from="1616034633346" duration="348000" />
+      <workItem from="1616055232180" duration="2099000" />
     </task>
     <servers />
   </component>
@@ -139,10 +152,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="261" y="62" key="#Auto_Import/0.0.1920.1040@0.0.1920.1040" timestamp="1614223448520" />
-    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1615978172821">
+    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1616057097029">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1615978172821" />
+    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1616057097029" />
     <state x="728" y="414" width="466" height="217" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1615632156443">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
