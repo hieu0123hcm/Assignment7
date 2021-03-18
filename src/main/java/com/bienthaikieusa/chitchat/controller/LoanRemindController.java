@@ -37,7 +37,7 @@ public class LoanRemindController {
         return new ResponseEntity<>(loanRemind, HttpStatus.CREATED);
     }
 
-    @RequestMapping(value = "/loanremind/{loanremindid}",method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/loanremind/id/{loanremindid}",method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<LoanRemind> getLoanByStudentId(@PathVariable("loanremindid") Long loanRemindID) {
         Optional<LoanRemind> loanRemind = loanRemindService.findByLoanRemindID(loanRemindID);
         if (!loanRemind.isPresent()) {
