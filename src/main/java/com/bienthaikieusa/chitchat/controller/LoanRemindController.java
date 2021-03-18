@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class LoanRemindController {
@@ -34,5 +35,14 @@ public class LoanRemindController {
         HttpHeaders headers = new HttpHeaders();
         headers.setLocation(builder.path("/loanremind/{studentid}").buildAndExpand(loanRemind.getStudentId()).toUri());
         return new ResponseEntity<>(loanRemind, HttpStatus.CREATED);
+    }
+
+    @RequestMapping(value = "/loanremind/{loanremindid}",method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<LoanRemind> getLoanByStudentId(@PathVariable("loanremindid") Long loanRemindID) {
+        Optional<LoanRemind> loanRemind = loanRemindService.findByLoanRemindID(loanRemindID);
+        if (!loanRemind.isPresent()) {
+            return new ResponseEntity<>( HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<>(loanRemind.get(), HttpStatus.OK);
     }
 }

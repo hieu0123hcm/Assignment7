@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class LoanRemindServiceImpl implements LoanRemindService {
@@ -23,4 +24,11 @@ public class LoanRemindServiceImpl implements LoanRemindService {
     public List<LoanRemind> findLoanRemindByStuID(String studentId) {
         return loanRemindRepository.findLRByStudentID(studentId);
     }
+
+    @Override
+    public Optional<LoanRemind> findByLoanRemindID(Long loanRemindID) {
+        return loanRemindRepository.findById(loanRemindID);
+    }
+
+
 }
